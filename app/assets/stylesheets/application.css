@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+ body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+.under_construction {
+    background-image: url('under_construction2.jpg');
+     
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

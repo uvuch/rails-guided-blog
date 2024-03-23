@@ -23,16 +23,16 @@ if ENV["RAILS_ENV"] == "production"
   }
 end
 
-if Rails.env.development?
-  key_path = File.expand_path('~/.ssh/localhost.key')
-  cert_path = File.expand_path('~/.ssh/localhost.crt')
+# if Rails.env.development?
+#   key_path = File.expand_path('~/.ssh/localhost.key')
+#   cert_path = File.expand_path('~/.ssh/localhost.crt')
 
-  ssl_bind '127.0.0.1', '3001', {
-    key: key_path,
-    cert: cert_path,
-    verify_mode: 'none'
-  }
-end
+#   ssl_bind '127.0.0.1', '3001', {
+#     key: key_path,
+#     cert: cert_path,
+#     verify_mode: 'none'
+#   }
+# end
 
 # Specifies the `worker_timeout` threshold that Puma will use to wait before
 # terminating a worker in development environments.
