@@ -17,8 +17,6 @@ if ENV["RAILS_ENV"] == "production"
   worker_count = Integer(ENV.fetch("WEB_CONCURRENCY") { Concurrent.physical_processor_count })
   workers worker_count if worker_count > 1
 
-  system('ls /secrets/*')
-
   ssl_bind '0.0.0.0', '443', {
     key:  '/secrets/uvuch.net_private_key.key',
     cert: '/secrets/uvuch.net_ssl_certificate.cer'
